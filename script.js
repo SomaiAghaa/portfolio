@@ -75,12 +75,12 @@ darkModeToggle.addEventListener('click', () => {
     }
 });
 
-// Download CV Action (يقوم بتحميل ملف الـ PDF مباشرة)
+// Download CV Action (تحميل السي في الخاص بكِ مباشرة)
 const downloadCvBtn = document.getElementById('downloadCvBtn');
 downloadCvBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const link = document.createElement('a');
-    link.href = 'SomiasCV.pdf'; // تأكدي أن ملف الـ PDF مرفوع في جيت هب بنفس هذا الاسم
+    link.href = "Somia'sCV.pdf"; // مطابقة لاسم ملف السي في الخاص بكِ[cite: 1]
     link.download = 'Somia_Rashad_QA_CV.pdf';
     document.body.appendChild(link);
     link.click();
