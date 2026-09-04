@@ -80,7 +80,7 @@ const downloadCvBtn = document.getElementById('downloadCvBtn');
 downloadCvBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const link = document.createElement('a');
-    link.href = 'SomiasCV.pdf'; // تأكدي أن ملف الـ PDF مرفوع بنفس هذا الاسم في المستودع
+    link.href = 'SomiasCV.pdf'; // تأكدي أن ملف الـ PDF مرفوع في جيت هب بنفس هذا الاسم
     link.download = 'Somia_Rashad_QA_CV.pdf';
     document.body.appendChild(link);
     link.click();
