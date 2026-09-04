@@ -75,11 +75,16 @@ darkModeToggle.addEventListener('click', () => {
     }
 });
 
-// Download CV Action
+// Download CV Action (يقوم بتحميل ملف الـ PDF مباشرة)
 const downloadCvBtn = document.getElementById('downloadCvBtn');
 downloadCvBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    alert('CV download will start shortly. Make sure to place your CV PDF file in the project folder!');
+    const link = document.createElement('a');
+    link.href = 'SomiasCV.pdf'; // تأكدي أن ملف الـ PDF مرفوع بنفس هذا الاسم في المستودع
+    link.download = 'Somia_Rashad_QA_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 });
 
 // Contact Form Handler
