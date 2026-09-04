@@ -1,28 +1,27 @@
-/* Global Styles & Variables */
 :root {
+    --bg-color: #080c14;
+    --card-bg: #111827;
+    --text-color: #f3f4f6;
+    --text-muted: #9ca3af;
+    --primary-color: #38bdf8;
+    --primary-hover: #0ea5e9;
+    --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+    --border-color: #1f2937;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    --navbar-bg: rgba(8, 12, 20, 0.85);
+}
+
+[data-theme="light"] {
     --bg-color: #f8fafc;
     --card-bg: #ffffff;
     --text-color: #1e293b;
     --text-muted: #64748b;
-    --primary-color: #6366f1;
-    --primary-hover: #4f46e5;
-    --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --primary-color: #0284c7;
+    --primary-hover: #0369a1;
+    --accent-gradient: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
     --border-color: #e2e8f0;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --navbar-bg: rgba(255, 255, 255, 0.85);
-}
-
-[data-theme="dark"] {
-    --bg-color: #0f172a;
-    --card-bg: #1e293b;
-    --text-color: #f8fafc;
-    --text-muted: #94a3b8;
-    --primary-color: #818cf8;
-    --primary-hover: #6366f1;
-    --accent-gradient: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
-    --border-color: #334155;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-    --navbar-bg: rgba(15, 23, 42, 0.85);
 }
 
 * {
@@ -162,7 +161,7 @@ body {
 
 .btn-primary {
     background: var(--primary-color);
-    color: #ffffff;
+    color: #080c14;
 }
 
 .btn-primary:hover {
@@ -177,7 +176,7 @@ body {
 
 .btn-secondary:hover {
     background: var(--primary-color);
-    color: #ffffff;
+    color: #080c14;
 }
 
 .btn-sm {
@@ -225,6 +224,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    color: var(--text-muted);
 }
 
 .about-tech h3 {
@@ -250,7 +250,7 @@ section {
 /* Skills Section */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
 }
 
@@ -261,11 +261,12 @@ section {
     border-radius: 10px;
     box-shadow: var(--shadow);
     text-align: center;
-    transition: transform 0.2s;
+    transition: transform 0.2s, border-color 0.2s;
 }
 
 .skill-card:hover {
     transform: translateY(-5px);
+    border-color: var(--primary-color);
 }
 
 .skill-icon {
@@ -304,11 +305,12 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.2s;
+    transition: transform 0.2s, border-color 0.2s;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    border-color: var(--primary-color);
 }
 
 .project-header {
@@ -413,7 +415,7 @@ section {
 
 .btn-modal:hover {
     background: var(--primary-color);
-    color: #fff;
+    color: #080c14;
     border-color: var(--primary-color);
 }
 
@@ -426,7 +428,7 @@ section {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
     justify-content: center;
     align-items: center;
 }
@@ -440,6 +442,7 @@ section {
     text-align: center;
     position: relative;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
 }
 
 .modal-close {
@@ -539,7 +542,7 @@ section {
     height: 45px;
     border-radius: 50%;
     background: var(--primary-color);
-    color: #fff;
+    color: #080c14;
     border: none;
     display: flex;
     align-items: center;
@@ -591,15 +594,9 @@ section {
     color: var(--primary-color);
 }
 
-/* Responsive Design */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 @media (max-width: 768px) {
     .nav-menu {
-        display: none; /* يمكن تطويرها لاحقاً لـ Hamburger Menu */
+        display: none;
     }
     .about-content,
     .contact-content {
