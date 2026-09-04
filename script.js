@@ -3,7 +3,6 @@ const modal = document.getElementById('certificateModal');
 const modalImage = document.getElementById('modalImage');
 const modalCaption = document.getElementById('modalCaption');
 
-// Data for certificates (بدون مجلد certificates، الصور في نفس الفولدر)
 const certificatesData = {
     nti: {
         img: 'nti-ml.png',
@@ -15,7 +14,7 @@ const certificatesData = {
     },
     sprints: {
         img: 'sprints-testing.png',
-        caption: 'Sprints x Microsoft Software Testing Program'
+        caption: 'Sprints x Microsoft Software Testing Program (2025)'
     },
     tcsc: {
         img: 'tcsc-ai.png',
@@ -45,36 +44,38 @@ function closeModal() {
     modalImage.src = '';
 }
 
-// Close modal when clicking outside of content
 window.onclick = function(event) {
     if (event.target === modal) {
         closeModal();
     }
 }
 
-// Dark Mode Toggle
+// Dark/Light Mode Toggle
 const darkModeToggle = document.getElementById('darkModeToggle');
-const currentTheme = localStorage.getItem('theme') || 'light';
+const currentTheme = localStorage.getItem('theme') || 'dark';
 
-if (currentTheme === 'dark') {
+if (currentTheme === 'light') {
+    document.body.setAttribute('data-theme', 'light');
+    darkModeToggle.textContent = '🌙';
+} else {
     document.body.setAttribute('data-theme', 'dark');
     darkModeToggle.textContent = '☀️';
 }
 
 darkModeToggle.addEventListener('click', () => {
     let theme = document.body.getAttribute('data-theme');
-    if (theme === 'dark') {
-        document.body.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
-        darkModeToggle.textContent = '🌙';
-    } else {
+    if (theme === 'light') {
         document.body.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
         darkModeToggle.textContent = '☀️';
+    } else {
+        document.body.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        darkModeToggle.textContent = '🌙';
     }
 });
 
-// Download CV Button Simulation / Action
+// Download CV Action
 const downloadCvBtn = document.getElementById('downloadCvBtn');
 downloadCvBtn.addEventListener('click', (e) => {
     e.preventDefault();
