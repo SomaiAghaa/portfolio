@@ -43,28 +43,28 @@ body {
 /* QA Testing Magnifying Lens Cursor Design */
 .mouse-lens {
     position: fixed;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     pointer-events: none;
-    transform: translate(-30%, -30%);
+    transform: translate(-10%, -10%);
     z-index: 9999;
     transition: transform 0.05s ease-out;
 }
 
 .lens-glass {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     border: 3px solid var(--primary-color);
     border-radius: 50%;
-    background: rgba(56, 189, 248, 0.1);
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    background: rgba(56, 189, 248, 0.08);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
 }
 
 .lens-handle {
     position: absolute;
-    bottom: -10px;
-    right: -10px;
-    width: 14px;
+    bottom: -12px;
+    right: -12px;
+    width: 16px;
     height: 4px;
     background: var(--primary-color);
     transform: rotate(45deg);
@@ -234,15 +234,6 @@ section {
     flex-direction: column;
     gap: 8px;
     color: var(--text-muted);
-}
-
-.about-info i,
-.contact-details i,
-.skill-list i {
-    color: var(--primary-color);
-    margin-right: 8px;
-    width: 16px;
-    text-align: center;
 }
 
 .about-tech h3 {
@@ -585,7 +576,7 @@ section {
     transform: scale(1.1);
 }
 
-/* Footer */
+/* Footer & Social Links */
 .footer {
     background: var(--card-bg);
     border-top: 1px solid var(--border-color);
@@ -600,7 +591,7 @@ section {
     gap: 20px;
 }
 
-.footer-copy {
+.footer p {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
