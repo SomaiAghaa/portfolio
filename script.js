@@ -1,3 +1,13 @@
+// Mouse Magnifying Lens Movement
+const mouseLens = document.querySelector('.mouse-lens');
+
+window.addEventListener('mousemove', (e) => {
+    if (mouseLens) {
+        mouseLens.style.left = `${e.clientX}px`;
+        mouseLens.style.top = `${e.clientY}px`;
+    }
+});
+
 // Certificate Modal Functionality
 const modal = document.getElementById('certificateModal');
 const modalImage = document.getElementById('modalImage');
@@ -75,23 +85,16 @@ darkModeToggle.addEventListener('click', () => {
     }
 });
 
-// Download CV Action (تحميل السي في الخاص بكِ مباشرة)
+// Download CV Action
 const downloadCvBtn = document.getElementById('downloadCvBtn');
-downloadCvBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    const link = document.createElement('a');
-    link.href = "Somia'sCV.pdf"; // مطابقة لاسم ملف السي في الخاص بكِ[cite: 1]
-    link.download = 'Somia_Rashad_QA_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-});
-
-// Contact Form Handler
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    alert(`Thank you, ${name}! Your message has been sent successfully.`);
-    contactForm.reset();
-});
+if (downloadCvBtn) {
+    downloadCvBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const link = document.createElement('a');
+        link.href = "Somia'sCV.pdf";
+        link.download = 'Somia_Rashad_QA_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+}
