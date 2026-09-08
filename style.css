@@ -33,38 +33,41 @@
 }
 
 body {
-    cursor: default;
+    cursor: none !important;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* QA Testing Magnifying Lens Cursor Design */
+a, button, input, .btn, .project-card, .credential-card, .training-card {
+    cursor: none !important;
+}
+
+/* Custom Testing Magnifying Glass Cursor */
 .mouse-lens {
     position: fixed;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     pointer-events: none;
-    transform: translate(-10%, -10%);
-    z-index: 9999;
-    transition: transform 0.05s ease-out;
+    transform: translate(-20%, -20%);
+    z-index: 999999;
 }
 
 .lens-glass {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     border: 3px solid var(--primary-color);
     border-radius: 50%;
-    background: rgba(56, 189, 248, 0.08);
-    box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+    background: rgba(56, 189, 248, 0.15);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
 }
 
 .lens-handle {
     position: absolute;
-    bottom: -12px;
-    right: -12px;
-    width: 16px;
+    bottom: -10px;
+    right: -10px;
+    width: 14px;
     height: 4px;
     background: var(--primary-color);
     transform: rotate(45deg);
@@ -634,6 +637,9 @@ section {
 }
 
 @media (max-width: 768px) {
+    body, a, button {
+        cursor: auto !important;
+    }
     .nav-menu {
         display: none;
     }
