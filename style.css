@@ -32,7 +32,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Mouse Magnifying Lens Effect */
 body {
     cursor: default;
     background-color: var(--bg-color);
@@ -41,6 +40,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Mouse Magnifying Lens Effect */
 .mouse-lens {
     position: fixed;
     width: 60px;
@@ -53,13 +53,6 @@ body {
     z-index: 9999;
     box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
     background: rgba(56, 189, 248, 0.03);
-}
-
-/* Enlarge lens slightly when hovering over links or buttons */
-a:hover ~ .mouse-lens, button:hover ~ .mouse-lens {
-    width: 90px;
-    height: 90px;
-    border-color: #6366f1;
 }
 
 .container {
@@ -225,6 +218,15 @@ section {
     flex-direction: column;
     gap: 8px;
     color: var(--text-muted);
+}
+
+.about-info i,
+.contact-details i,
+.skill-list i {
+    color: var(--primary-color);
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
 }
 
 .about-tech h3 {
@@ -626,6 +628,6 @@ section {
         font-size: 2.2rem;
     }
     .mouse-lens {
-        display: none; /* إخفاء العدسة في الموبايل لعدم وجود مأوس حقيقي */
+        display: none;
     }
 }
