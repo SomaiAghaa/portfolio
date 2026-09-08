@@ -236,6 +236,15 @@ section {
     color: var(--text-muted);
 }
 
+.about-info i,
+.contact-details i,
+.skill-list i {
+    color: var(--primary-color);
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+}
+
 .about-tech h3 {
     margin-bottom: 15px;
 }
@@ -576,7 +585,7 @@ section {
     transform: scale(1.1);
 }
 
-/* Footer & Social Links */
+/* Footer */
 .footer {
     background: var(--card-bg);
     border-top: 1px solid var(--border-color);
@@ -591,7 +600,7 @@ section {
     gap: 20px;
 }
 
-.footer p {
+.footer-copy {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
