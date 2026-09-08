@@ -2,6 +2,7 @@
 const mouseLens = document.querySelector('.mouse-lens');
 if (mouseLens) {
     window.addEventListener('mousemove', (e) => {
+        mouseLens.style.display = 'block';
         mouseLens.style.left = e.clientX + 'px';
         mouseLens.style.top = e.clientY + 'px';
     });
