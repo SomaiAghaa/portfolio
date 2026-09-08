@@ -33,26 +33,10 @@
 }
 
 body {
-    cursor: default;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Mouse Magnifying Lens Effect */
-.mouse-lens {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    border: 2px solid var(--primary-color);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, border-color 0.2s;
-    z-index: 9999;
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-    background: rgba(56, 189, 248, 0.03);
 }
 
 .container {
@@ -220,15 +204,6 @@ section {
     color: var(--text-muted);
 }
 
-.about-info i,
-.contact-details i,
-.skill-list i {
-    color: var(--primary-color);
-    margin-right: 8px;
-    width: 16px;
-    text-align: center;
-}
-
 .about-tech h3 {
     margin-bottom: 15px;
 }
@@ -247,56 +222,6 @@ section {
     font-size: 0.85rem;
     font-weight: 500;
     box-shadow: var(--shadow);
-}
-
-/* Trainings Section Style */
-.trainings-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.training-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    transition: transform 0.2s, border-color 0.2s;
-}
-
-.training-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary-color);
-}
-
-.training-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-    color: var(--text-color);
-}
-
-.training-org {
-    color: var(--primary-color);
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.training-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 15px;
-}
-
-.training-desc {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.5;
 }
 
 /* Skills Section */
@@ -626,8 +551,5 @@ section {
     }
     .hero-title {
         font-size: 2.2rem;
-    }
-    .mouse-lens {
-        display: none;
     }
 }
