@@ -42,7 +42,7 @@ const certificatesData = {
 
 function openModal(certKey) {
     const cert = certificatesData[certKey];
-    if (cert) {
+    if (cert && modalImage && modalCaption && modal) {
         modalImage.src = cert.img;
         modalCaption.textContent = cert.caption;
         modal.style.display = 'flex';
@@ -50,8 +50,10 @@ function openModal(certKey) {
 }
 
 function closeModal() {
-    modal.style.display = 'none';
-    modalImage.src = '';
+    if (modal && modalImage) {
+        modal.style.display = 'none';
+        modalImage.src = '';
+    }
 }
 
 window.onclick = function(event) {
@@ -64,15 +66,15 @@ window.onclick = function(event) {
 const darkModeToggle = document.getElementById('darkModeToggle');
 const currentTheme = localStorage.getItem('theme') || 'dark';
 
-if (currentTheme === 'light') {
-    document.body.setAttribute('data-theme', 'light');
-    if (darkModeToggle) darkModeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
-} else {
-    document.body.setAttribute('data-theme', 'dark');
-    if (darkModeToggle) darkModeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
-}
-
 if (darkModeToggle) {
+    if (currentTheme === 'light') {
+        document.body.setAttribute('data-theme', 'light');
+        darkModeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    } else {
+        document.body.setAttribute('data-theme', 'dark');
+        darkModeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    }
+
     darkModeToggle.addEventListener('click', () => {
         let theme = document.body.getAttribute('data-theme');
         if (theme === 'light') {
