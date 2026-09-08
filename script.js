@@ -66,24 +66,26 @@ const currentTheme = localStorage.getItem('theme') || 'dark';
 
 if (currentTheme === 'light') {
     document.body.setAttribute('data-theme', 'light');
-    darkModeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    if (darkModeToggle) darkModeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
 } else {
     document.body.setAttribute('data-theme', 'dark');
-    darkModeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    if (darkModeToggle) darkModeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
 }
 
-darkModeToggle.addEventListener('click', () => {
-    let theme = document.body.getAttribute('data-theme');
-    if (theme === 'light') {
-        document.body.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        darkModeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
-    } else {
-        document.body.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        darkModeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
-    }
-});
+if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', () => {
+        let theme = document.body.getAttribute('data-theme');
+        if (theme === 'light') {
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            darkModeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        } else {
+            document.body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            darkModeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        }
+    });
+}
 
 // Download CV Action
 const downloadCvBtn = document.getElementById('downloadCvBtn');
