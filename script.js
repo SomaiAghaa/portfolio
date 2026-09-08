@@ -60,16 +60,16 @@ window.onclick = function(event) {
     }
 }
 
-// Dark/Light Mode Toggle
+// Dark/Light Mode Toggle with FontAwesome Icons
 const darkModeToggle = document.getElementById('darkModeToggle');
 const currentTheme = localStorage.getItem('theme') || 'dark';
 
 if (currentTheme === 'light') {
     document.body.setAttribute('data-theme', 'light');
-    darkModeToggle.textContent = '🌙';
+    darkModeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
 } else {
     document.body.setAttribute('data-theme', 'dark');
-    darkModeToggle.textContent = '☀️';
+    darkModeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
 }
 
 darkModeToggle.addEventListener('click', () => {
@@ -77,11 +77,11 @@ darkModeToggle.addEventListener('click', () => {
     if (theme === 'light') {
         document.body.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        darkModeToggle.textContent = '☀️';
+        darkModeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
     } else {
         document.body.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
-        darkModeToggle.textContent = '🌙';
+        darkModeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
     }
 });
 
