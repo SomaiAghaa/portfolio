@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="dark">
+    <!-- Mouse Magnifying Lens -->
+    <div class="mouse-lens"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -14,6 +17,7 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#trainings" class="nav-link">Trainings</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#credentials" class="nav-link">Credentials</a></li>
@@ -58,6 +62,55 @@
                         <span class="badge">Testing</span>
                         <span class="badge">Jira</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainings & Internships Section -->
+    <section id="trainings" class="trainings">
+        <div class="container">
+            <h2 class="section-title">Trainings & Internships</h2>
+            <div class="trainings-grid">
+                <div class="training-card">
+                    <h3>Machine Learning Training</h3>
+                    <p class="training-org">NTI (National Telecommunication Institute)</p>
+                    <div class="training-details">
+                        <span class="detail">July - August 2026</span>
+                        <span class="detail">120 Hours</span>
+                        <span class="detail">Grade: 86.5%</span>
+                    </div>
+                    <p class="training-desc">Intensive training program focusing on machine learning algorithms, data analysis, and predictive modeling using Python.</p>
+                </div>
+
+                <div class="training-card">
+                    <h3>Generative AI Summer Internship</h3>
+                    <p class="training-org">CIB (Commercial International Bank)</p>
+                    <div class="training-details">
+                        <span class="detail">July - August 2026</span>
+                        <span class="detail">Banking & AI Tech</span>
+                    </div>
+                    <p class="training-desc">Explored enterprise AI implementations, generative models, and digital transformation applications in the banking sector.</p>
+                </div>
+
+                <div class="training-card">
+                    <h3>Software Testing Track</h3>
+                    <p class="training-org">DEPI & Sprints x Microsoft</p>
+                    <div class="training-details">
+                        <span class="detail">2025 - 2026</span>
+                        <span class="detail">QA & Testing</span>
+                    </div>
+                    <p class="training-desc">Practical training in software testing methodologies, test scenario design, bug tracking, and client simulation roleplays.</p>
+                </div>
+
+                <div class="training-card">
+                    <h3>Modern AI Introduction</h3>
+                    <p class="training-org">Arab Open University (Cisco Academy)</p>
+                    <div class="training-details">
+                        <span class="detail">August 2026</span>
+                        <span class="detail">AI Fundamentals</span>
+                    </div>
+                    <p class="training-desc">Completed official fundamentals covering core concepts of Artificial Intelligence and modern intelligent systems.</p>
                 </div>
             </div>
         </div>
@@ -204,7 +257,6 @@
         <div class="container">
             <h2 class="section-title">Certifications & Achievements</h2>
             <div class="credentials-grid">
-                <!-- NTI -->
                 <div class="credential-card">
                     <h3>Machine Learning</h3>
                     <p class="credential-org">NTI (National Telecommunication Institute)</p>
@@ -216,7 +268,6 @@
                     <button class="btn-modal" onclick="openModal('nti')">View Certificate</button>
                 </div>
 
-                <!-- CIB -->
                 <div class="credential-card">
                     <h3>Generative AI Internship</h3>
                     <p class="credential-org">CIB (Commercial International Bank)</p>
@@ -227,7 +278,6 @@
                     <button class="btn-modal" onclick="openModal('cib')">View Certificate</button>
                 </div>
 
-                <!-- Sprints x Microsoft (2025) -->
                 <div class="credential-card">
                     <h3>Software Testing</h3>
                     <p class="credential-org">Sprints x Microsoft</p>
@@ -239,7 +289,6 @@
                     <button class="btn-modal" onclick="openModal('sprints')">View Certificate</button>
                 </div>
 
-                <!-- TCSC -->
                 <div class="credential-card">
                     <h3>Modern AI Introduction</h3>
                     <p class="credential-org">TCSC Arab Open University (Cisco Academy)</p>
@@ -250,7 +299,6 @@
                     <button class="btn-modal" onclick="openModal('tcsc')">View Certificate</button>
                 </div>
 
-                <!-- ITI -->
                 <div class="credential-card">
                     <h3>Software Testing Concepts</h3>
                     <p class="credential-org">ITI / Mahara-Tech</p>
@@ -262,7 +310,6 @@
                     <button class="btn-modal" onclick="openModal('iti')">View Certificate</button>
                 </div>
 
-                <!-- Build with AI -->
                 <div class="credential-card">
                     <h3>Build with AI: MASR Edition</h3>
                     <p class="credential-org">Google for Developers</p>
