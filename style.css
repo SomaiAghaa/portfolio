@@ -52,6 +52,7 @@ a, button, input, .btn, .project-card, .credential-card, .training-card {
     pointer-events: none;
     transform: translate(-20%, -20%);
     z-index: 999999;
+    display: none;
 }
 
 .lens-glass {
@@ -167,7 +168,6 @@ a, button, input, .btn, .project-card, .credential-card, .training-card {
     font-weight: 600;
     text-decoration: none;
     transition: all 0.2s;
-    cursor: pointer;
     border: none;
 }
 
@@ -471,7 +471,7 @@ section {
     border-radius: 6px;
     font-size: 0.85rem;
     color: var(--text-color);
-    cursor: pointer;
+    cursor: none !important;
     transition: all 0.2s;
 }
 
@@ -512,7 +512,7 @@ section {
     top: 10px;
     right: 15px;
     font-size: 1.5rem;
-    cursor: pointer;
+    cursor: none !important;
     color: var(--text-color);
 }
 
@@ -577,7 +577,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: none !important;
     box-shadow: var(--shadow);
     font-size: 1.1rem;
     text-decoration: none;
