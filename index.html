@@ -1,375 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somia Rashad Aghaa - Software QA Engineer</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body data-theme="dark">
-    <!-- Mouse Magnifying Lens -->
-    <div class="mouse-lens"></div>
+// Mouse Magnifying Lens Movement
+const mouseLens = document.querySelector('.mouse-lens');
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">Somia Rashad Aghaa</a>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#trainings" class="nav-link">Trainings</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#credentials" class="nav-link">Credentials</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+window.addEventListener('mousemove', (e) => {
+    if (mouseLens) {
+        mouseLens.style.left = `${e.clientX}px`;
+        mouseLens.style.top = `${e.clientY}px`;
+    }
+});
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Hi, I'm <span class="gradient-text">Somia Rashad Aghaa</span></h1>
-            <p class="hero-subtitle">Software QA Engineer | Passionate About Testing & Quality</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                <a href="#projects" class="btn btn-secondary">View My Work</a>
-            </div>
-        </div>
-    </section>
+// Certificate Modal Functionality
+const modal = document.getElementById('certificateModal');
+const modalImage = document.getElementById('modalImage');
+const modalCaption = document.getElementById('modalCaption');
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a <strong>Software Quality Assurance Engineer</strong> based in Suez, Egypt. With a strong foundation in testing methodologies, programming, and quality standards, I'm passionate about building robust systems and ensuring flawless user experiences.</p>
-                    <p>I specialize in <strong>manual testing</strong>, <strong>functional testing</strong>, and <strong>test case design</strong>, alongside hands-on experience with Java and Python.</p>
-                    <div class="about-info">
-                        <p><strong>📍 Location:</strong> Suez, Egypt</p>
-                        <p><strong>📊 GPA:</strong> 3.76</p>
-                        <p><strong>📧 Email:</strong> somiaaghaa3082006@gmail.com</p>
-                        <p><strong>📱 Phone:</strong> +20 1098729073</p>
-                    </div>
-                </div>
-                <div class="about-tech">
-                    <h3>Tech Stack</h3>
-                    <div class="tech-badges">
-                        <span class="badge">Java</span>
-                        <span class="badge">Python</span>
-                        <span class="badge">SQL</span>
-                        <span class="badge">Testing</span>
-                        <span class="badge">Jira</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+const certificatesData = {
+    nti: {
+        img: 'nti-ml.png',
+        caption: 'NTI Machine Learning Training Program (120 Hours, Grade: 86.5%)'
+    },
+    cib: {
+        img: 'cib-ai.png',
+        caption: 'CIB Generative AI Summer Internship Certificate'
+    },
+    sprints: {
+        img: 'sprints-testing.png',
+        caption: 'Sprints x Microsoft Software Testing Program (2025)'
+    },
+    tcsc: {
+        img: 'tcsc-ai.png',
+        caption: 'TCSC Arab Open University / Cisco Modern AI Course'
+    },
+    iti: {
+        img: 'iti-qa.png',
+        caption: 'ITI Mahara-Tech Software Testing Concepts'
+    },
+    masr: {
+        img: 'google-ai.png',
+        caption: 'Google for Developers - Build with AI: MASR Edition'
+    }
+};
 
-    <!-- Trainings & Internships Section -->
-    <section id="trainings" class="trainings">
-        <div class="container">
-            <h2 class="section-title">Trainings & Internships</h2>
-            <div class="trainings-grid">
-                <div class="training-card">
-                    <h3>Machine Learning Training</h3>
-                    <p class="training-org">NTI (National Telecommunication Institute)</p>
-                    <div class="training-details">
-                        <span class="detail">July - August 2026</span>
-                        <span class="detail">120 Hours</span>
-                        <span class="detail">Grade: 86.5%</span>
-                    </div>
-                    <p class="training-desc">Intensive training program focusing on machine learning algorithms, data analysis, and predictive modeling using Python.</p>
-                </div>
+function openModal(certKey) {
+    const cert = certificatesData[certKey];
+    if (cert) {
+        modalImage.src = cert.img;
+        modalCaption.textContent = cert.caption;
+        modal.style.display = 'flex';
+    }
+}
 
-                <div class="training-card">
-                    <h3>Generative AI Summer Internship</h3>
-                    <p class="training-org">CIB (Commercial International Bank)</p>
-                    <div class="training-details">
-                        <span class="detail">July - August 2026</span>
-                        <span class="detail">Banking & AI Tech</span>
-                    </div>
-                    <p class="training-desc">Explored enterprise AI implementations, generative models, and digital transformation applications in the banking sector.</p>
-                </div>
+function closeModal() {
+    modal.style.display = 'none';
+    modalImage.src = '';
+}
 
-                <div class="training-card">
-                    <h3>Software Testing Track</h3>
-                    <p class="training-org">DEPI & Sprints x Microsoft</p>
-                    <div class="training-details">
-                        <span class="detail">2025 - 2026</span>
-                        <span class="detail">QA & Testing</span>
-                    </div>
-                    <p class="training-desc">Practical training in software testing methodologies, test scenario design, bug tracking, and client simulation roleplays.</p>
-                </div>
+window.onclick = function(event) {
+    if (event.target === modal) {
+        closeModal();
+    }
+}
 
-                <div class="training-card">
-                    <h3>Modern AI Introduction</h3>
-                    <p class="training-org">Arab Open University (Cisco Academy)</p>
-                    <div class="training-details">
-                        <span class="detail">August 2026</span>
-                        <span class="detail">AI Fundamentals</span>
-                    </div>
-                    <p class="training-desc">Completed official fundamentals covering core concepts of Artificial Intelligence and modern intelligent systems.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+// Dark/Light Mode Toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+const currentTheme = localStorage.getItem('theme') || 'dark';
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>QA & Testing</h3>
-                    <ul class="skill-list">
-                        <li>✓ Manual Testing</li>
-                        <li>✓ Functional Testing</li>
-                        <li>✓ UI Testing</li>
-                        <li>✓ Test Case Design</li>
-                        <li>✓ STLC & Bug Tracking</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Programming</h3>
-                    <ul class="skill-list">
-                        <li>✓ Java & OOP</li>
-                        <li>✓ Python</li>
-                        <li>✓ Data Structures</li>
-                        <li>✓ Algorithms</li>
-                        <li>✓ Problem Solving</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Tools & Platforms</h3>
-                    <ul class="skill-list">
-                        <li>✓ Git & GitHub</li>
-                        <li>✓ VS Code</li>
-                        <li>✓ IntelliJ IDEA</li>
-                        <li>✓ Jira</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+if (currentTheme === 'light') {
+    document.body.setAttribute('data-theme', 'light');
+    darkModeToggle.textContent = '🌙';
+} else {
+    document.body.setAttribute('data-theme', 'dark');
+    darkModeToggle.textContent = '☀️';
+}
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Basic File Encryption-Decryption</h3>
-                        <span class="project-badge">Python</span>
-                    </div>
-                    <p>Secure file encryption and decryption system with modern cryptographic techniques.</p>
-                    <a href="https://github.com/SomaiAghaa/Basic-File-Encryption-Decryption" target="_blank" class="project-link">View Code →</a>
-                </div>
+darkModeToggle.addEventListener('click', () => {
+    let theme = document.body.getAttribute('data-theme');
+    if (theme === 'light') {
+        document.body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        darkModeToggle.textContent = '☀️';
+    } else {
+        document.body.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        darkModeToggle.textContent = '🌙';
+    }
+});
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>N-Queens Problem Solver</h3>
-                        <span class="project-badge">Java</span>
-                    </div>
-                    <p>Efficient backtracking algorithm implementation for the classic N-Queens problem.</p>
-                    <a href="https://github.com/SomaiAghaa/-N-Queens-Problem" target="_blank" class="project-link">View Code →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>API Integration System</h3>
-                        <span class="project-badge">Python</span>
-                    </div>
-                    <p>Robust API integration framework with error handling and data validation.</p>
-                    <a href="https://github.com/SomaiAghaa/API_Integration" target="_blank" class="project-link">View Code →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Number Guessing Game</h3>
-                        <span class="project-badge">Java</span>
-                    </div>
-                    <p>Interactive game with difficulty levels and score tracking system.</p>
-                    <a href="https://github.com/SomaiAghaa/Number-Guessing-Game" target="_blank" class="project-link">View Code →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Phishing Link Detection</h3>
-                        <span class="project-badge">Python, ML</span>
-                    </div>
-                    <p>Machine learning model for detecting and classifying phishing URLs with high accuracy.</p>
-                    <a href="https://github.com/SomaiAghaa/Phishing-Link-Detection-System" target="_blank" class="project-link">View Code →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Insurance Cost Prediction</h3>
-                        <span class="project-badge">Python, ML</span>
-                    </div>
-                    <p>Predictive model for insurance premium estimation using regression analysis.</p>
-                    <a href="https://github.com/SomaiAghaa/Insurance-Cost-Prediction" target="_blank" class="project-link">View Code →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Phishing Detection System</h3>
-                        <span class="project-badge">Java, OOP</span>
-                    </div>
-                    <p>Object-oriented design implementation for advanced phishing threat detection.</p>
-                    <a href="https://github.com/SomaiAghaa/Phishing-Detection-Java-OOP" target="_blank" class="project-link">View Code →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Unit Testing Framework</h3>
-                        <span class="project-badge">Java, Testing</span>
-                    </div>
-                    <p>Comprehensive unit testing suite demonstrating best testing practices.</p>
-                    <a href="https://github.com/SomaiAghaa/unit_testing" target="_blank" class="project-link">View Code →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Company Management System</h3>
-                        <span class="project-badge">Java</span>
-                    </div>
-                    <p>Enterprise system for managing company operations and employee data.</p>
-                    <a href="https://github.com/SomaiAghaa/CompanyManagementSystem" target="_blank" class="project-link">View Code →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Bank Account System</h3>
-                        <span class="project-badge">Java, OOP</span>
-                    </div>
-                    <p>Secure banking application with account management and transaction processing.</p>
-                    <a href="https://github.com/SomaiAghaa/BankAccount-Java-OOP" target="_blank" class="project-link">View Code →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Credentials Section -->
-    <section id="credentials" class="credentials">
-        <div class="container">
-            <h2 class="section-title">Certifications & Achievements</h2>
-            <div class="credentials-grid">
-                <div class="credential-card">
-                    <h3>Machine Learning</h3>
-                    <p class="credential-org">NTI (National Telecommunication Institute)</p>
-                    <div class="credential-details">
-                        <span class="detail">July 2026</span>
-                        <span class="detail">120 Hours</span>
-                        <span class="detail">86.5%</span>
-                    </div>
-                    <button class="btn-modal" onclick="openModal('nti')">View Certificate</button>
-                </div>
-
-                <div class="credential-card">
-                    <h3>Generative AI Internship</h3>
-                    <p class="credential-org">CIB (Commercial International Bank)</p>
-                    <div class="credential-details">
-                        <span class="detail">July 2026</span>
-                        <span class="detail">Banking & AI Tech</span>
-                    </div>
-                    <button class="btn-modal" onclick="openModal('cib')">View Certificate</button>
-                </div>
-
-                <div class="credential-card">
-                    <h3>Software Testing</h3>
-                    <p class="credential-org">Sprints x Microsoft</p>
-                    <div class="credential-details">
-                        <span class="detail">2025</span>
-                        <span class="detail">40 Hours</span>
-                        <span class="detail">Testing & Python</span>
-                    </div>
-                    <button class="btn-modal" onclick="openModal('sprints')">View Certificate</button>
-                </div>
-
-                <div class="credential-card">
-                    <h3>Modern AI Introduction</h3>
-                    <p class="credential-org">TCSC Arab Open University (Cisco Academy)</p>
-                    <div class="credential-details">
-                        <span class="detail">August 2026</span>
-                        <span class="detail">AI Fundamentals</span>
-                    </div>
-                    <button class="btn-modal" onclick="openModal('tcsc')">View Certificate</button>
-                </div>
-
-                <div class="credential-card">
-                    <h3>Software Testing Concepts</h3>
-                    <p class="credential-org">ITI / Mahara-Tech</p>
-                    <div class="credential-details">
-                        <span class="detail">March 2026</span>
-                        <span class="detail">1h 20m</span>
-                        <span class="detail">QA Basics</span>
-                    </div>
-                    <button class="btn-modal" onclick="openModal('iti')">View Certificate</button>
-                </div>
-
-                <div class="credential-card">
-                    <h3>Build with AI: MASR Edition</h3>
-                    <p class="credential-org">Google for Developers</p>
-                    <div class="credential-details">
-                        <span class="detail">2026</span>
-                        <span class="detail">5000+ Developers</span>
-                    </div>
-                    <button class="btn-modal" onclick="openModal('masr')">View Certificate</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal for Certificates -->
-    <div id="certificateModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal()">&times;</span>
-            <img id="modalImage" src="" alt="Certificate" class="modal-image">
-            <p id="modalCaption" class="modal-caption"></p>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>I'm always open to discussing new opportunities, software QA projects, or collaborations.</p>
-                    <div class="contact-details">
-                        <p><strong>Email:</strong> somiaaghaa3082006@gmail.com</p>
-                        <p><strong>Phone:</strong> +20 1098729073</p>
-                        <p><strong>Location:</strong> Suez, Egypt</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Floating Control -->
-    <div class="floating-controls">
-        <button id="darkModeToggle" class="floating-btn" title="Toggle Dark/Light Mode">☀️</button>
-        <a href="#contact" class="floating-btn contact-float" title="Quick Contact">💬</a>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2026 Somia Rashad Aghaa. All rights reserved.</p>
-            <div class="footer-social">
-                <a href="https://github.com/SomaiAghaa" target="_blank" class="social-icon">GitHub</a>
-                <a href="https://www.linkedin.com" target="_blank" class="social-icon">LinkedIn</a>
-            </div>
-            <div class="footer-cv">
-                <a href="#" id="downloadCvBtn" class="btn btn-secondary btn-sm">Download CV (PDF)</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+// Download CV Action
+const downloadCvBtn = document.getElementById('downloadCvBtn');
+if (downloadCvBtn) {
+    downloadCvBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const link = document.createElement('a');
+        link.href = "Somia'sCV.pdf";
+        link.download = 'Somia_Rashad_QA_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+}
