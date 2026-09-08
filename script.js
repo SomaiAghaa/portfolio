@@ -7,7 +7,7 @@ if (mouseLens) {
     });
 }
 
-// 2. Dark/Light Mode Toggle
+// 2. Dark/Light Mode Toggle with FontAwesome Icons
 const darkModeToggle = document.getElementById('darkModeToggle');
 if (darkModeToggle) {
     const currentTheme = localStorage.getItem('theme') || 'dark';
