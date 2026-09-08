@@ -53,8 +53,10 @@ function openModal(certKey) {
 
 function closeModal() {
     const modal = document.getElementById('certificateModal');
+    const modalImage = document.getElementById('modalImage');
     if (modal) {
         modal.style.display = 'none';
+        if (modalImage) modalImage.src = '';
     }
 }
 
