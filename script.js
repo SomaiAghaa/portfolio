@@ -1,4 +1,4 @@
-// 1. Mouse Magnifying Lens Movement
+// 1. Testing Magnifying Lens Movement
 const mouseLens = document.querySelector('.mouse-lens');
 if (mouseLens) {
     window.addEventListener('mousemove', (e) => {
