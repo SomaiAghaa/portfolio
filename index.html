@@ -22,6 +22,7 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#whatido" class="nav-link">What I Do</a></li>
                 <li><a href="#trainings" class="nav-link">Trainings</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -39,6 +40,7 @@
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary">Get In Touch</a>
                 <a href="#projects" class="btn btn-secondary">View My Work</a>
+                <a href="#" id="downloadCvBtn" class="btn btn-secondary">Download CV (PDF)</a>
             </div>
         </div>
     </section>
@@ -48,6 +50,9 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
+                <div class="about-image">
+                    <img src="profile.jpg" alt="Somia Rashad Aghaa" class="profile-img">
+                </div>
                 <div class="about-text">
                     <p>I'm a <strong>Software Quality Assurance Engineer</strong> based in Suez, Egypt. With a strong foundation in testing methodologies, programming, and quality standards, I'm passionate about building robust systems and ensuring flawless user experiences.</p>
                     <p>I specialize in <strong>manual testing</strong>, <strong>functional testing</strong>, and <strong>test case design</strong>, alongside hands-on experience with Java and Python.</p>
@@ -58,15 +63,26 @@
                         <p><strong><i class="fa-solid fa-phone"></i> Phone:</strong> +20 1098729073</p>
                     </div>
                 </div>
-                <div class="about-tech">
-                    <h3>Tech Stack</h3>
-                    <div class="tech-badges">
-                        <span class="badge">Java</span>
-                        <span class="badge">Python</span>
-                        <span class="badge">SQL</span>
-                        <span class="badge">Testing</span>
-                        <span class="badge">Jira</span>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section id="whatido" class="what-i-do">
+        <div class="container">
+            <h2 class="section-title">What I Do</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Manual & Functional Testing</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Designing test scenarios, executing test cases, and ensuring software meets rigorous quality standards.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Automation & Programming</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Writing robust scripts using Java and Python, implementing data structures, and solving algorithmic problems.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Bug Tracking & STLC</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Tracking defects efficiently using Jira, managing Git versions, and collaborating seamlessly in team environments.</p>
                 </div>
             </div>
         </div>
@@ -77,6 +93,16 @@
         <div class="container">
             <h2 class="section-title">Trainings & Internships</h2>
             <div class="trainings-grid">
+                <div class="training-card">
+                    <h3>Software Testing Track</h3>
+                    <p class="training-org">DEPI (Digital Egypt Pioneers Initiative) & Sprints x Microsoft</p>
+                    <div class="training-details">
+                        <span class="detail">July - December (Present)</span>
+                        <span class="detail">Software Testing & QA</span>
+                    </div>
+                    <p class="training-desc">Intensive professional training in software testing methodologies, test scenario design, bug tracking via Jira, and client simulation roleplays.</p>
+                </div>
+
                 <div class="training-card">
                     <h3>Machine Learning Training</h3>
                     <p class="training-org">NTI (National Telecommunication Institute)</p>
@@ -96,16 +122,6 @@
                         <span class="detail">Banking & AI Tech</span>
                     </div>
                     <p class="training-desc">Explored enterprise AI implementations, generative models, and digital transformation applications in the banking sector.</p>
-                </div>
-
-                <div class="training-card">
-                    <h3>Software Testing Track</h3>
-                    <p class="training-org">DEPI & Sprints x Microsoft</p>
-                    <div class="training-details">
-                        <span class="detail">2025 - 2026</span>
-                        <span class="detail">QA & Testing</span>
-                    </div>
-                    <p class="training-desc">Practical training in software testing methodologies, test scenario design, bug tracking, and client simulation roleplays.</p>
                 </div>
             </div>
         </div>
@@ -160,7 +176,7 @@
                         <span class="project-badge">Python</span>
                     </div>
                     <p>Secure file encryption and decryption system with modern cryptographic techniques.</p>
-                    <a href="https://github.com/SomaiAghaa/Basic-File-Encryption-Decryption" target="_blank" class="project-link">View Code →</a>
+                    <a href="https://github.com/SomaiAghaa/Basic-File-Encryption-Decryption" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> Repository</a>
                 </div>
 
                 <div class="project-card">
@@ -169,7 +185,7 @@
                         <span class="project-badge">Java</span>
                     </div>
                     <p>Efficient backtracking algorithm implementation for the classic N-Queens problem.</p>
-                    <a href="https://github.com/SomaiAghaa/-N-Queens-Problem" target="_blank" class="project-link">View Code →</a>
+                    <a href="https://github.com/SomaiAghaa/-N-Queens-Problem" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> Repository</a>
                 </div>
 
                 <div class="project-card">
@@ -178,7 +194,7 @@
                         <span class="project-badge">Python</span>
                     </div>
                     <p>Robust API integration framework with error handling and data validation.</p>
-                    <a href="https://github.com/SomaiAghaa/API_Integration" target="_blank" class="project-link">View Code →</a>
+                    <a href="https://github.com/SomaiAghaa/API_Integration" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> Repository</a>
                 </div>
 
                 <div class="project-card">
@@ -187,7 +203,7 @@
                         <span class="project-badge">Java</span>
                     </div>
                     <p>Interactive game with difficulty levels and score tracking system.</p>
-                    <a href="https://github.com/SomaiAghaa/Number-Guessing-Game" target="_blank" class="project-link">View Code →</a>
+                    <a href="https://github.com/SomaiAghaa/Number-Guessing-Game" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> Repository</a>
                 </div>
 
                 <div class="project-card">
@@ -196,7 +212,7 @@
                         <span class="project-badge">Python, ML</span>
                     </div>
                     <p>Machine learning model for detecting and classifying phishing URLs with high accuracy.</p>
-                    <a href="https://github.com/SomaiAghaa/Phishing-Link-Detection-System" target="_blank" class="project-link">View Code →</a>
+                    <a href="https://github.com/SomaiAghaa/Phishing-Link-Detection-System" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> Repository</a>
                 </div>
 
                 <div class="project-card">
@@ -205,7 +221,7 @@
                         <span class="project-badge">Python, ML</span>
                     </div>
                     <p>Predictive model for insurance premium estimation using regression analysis.</p>
-                    <a href="https://github.com/SomaiAghaa/Insurance-Cost-Prediction" target="_blank" class="project-link">View Code →</a>
+                    <a href="https://github.com/SomaiAghaa/Insurance-Cost-Prediction" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> Repository</a>
                 </div>
 
                 <div class="project-card">
@@ -214,7 +230,7 @@
                         <span class="project-badge">Java, OOP</span>
                     </div>
                     <p>Object-oriented design implementation for advanced phishing threat detection.</p>
-                    <a href="https://github.com/SomaiAghaa/Phishing-Detection-Java-OOP" target="_blank" class="project-link">View Code →</a>
+                    <a href="https://github.com/SomaiAghaa/Phishing-Detection-Java-OOP" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> Repository</a>
                 </div>
 
                 <div class="project-card">
@@ -223,7 +239,7 @@
                         <span class="project-badge">Java, Testing</span>
                     </div>
                     <p>Comprehensive unit testing suite demonstrating best testing practices.</p>
-                    <a href="https://github.com/SomaiAghaa/unit_testing" target="_blank" class="project-link">View Code →</a>
+                    <a href="https://github.com/SomaiAghaa/unit_testing" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> Repository</a>
                 </div>
 
                 <div class="project-card">
@@ -232,7 +248,7 @@
                         <span class="project-badge">Java</span>
                     </div>
                     <p>Enterprise system for managing company operations and employee data.</p>
-                    <a href="https://github.com/SomaiAghaa/CompanyManagementSystem" target="_blank" class="project-link">View Code →</a>
+                    <a href="https://github.com/SomaiAghaa/CompanyManagementSystem" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> Repository</a>
                 </div>
 
                 <div class="project-card">
@@ -241,7 +257,7 @@
                         <span class="project-badge">Java, OOP</span>
                     </div>
                     <p>Secure banking application with account management and transaction processing.</p>
-                    <a href="https://github.com/SomaiAghaa/BankAccount-Java-OOP" target="_blank" class="project-link">View Code →</a>
+                    <a href="https://github.com/SomaiAghaa/BankAccount-Java-OOP" target="_blank" class="project-btn"><i class="fa-brands fa-github"></i> Repository</a>
                 </div>
             </div>
         </div>
@@ -339,6 +355,8 @@
                         <p><strong><i class="fa-solid fa-envelope"></i> Email:</strong> somiaaghaa3082006@gmail.com</p>
                         <p><strong><i class="fa-solid fa-phone"></i> Phone:</strong> +20 1098729073</p>
                         <p><strong><i class="fa-solid fa-location-dot"></i> Location:</strong> Suez, Egypt</p>
+                        <p><strong><i class="fa-brands fa-linkedin"></i> LinkedIn:</strong> <a href="https://www.linkedin.com" target="_blank" style="color: var(--primary-color); text-decoration: none;">Connect on LinkedIn</a></p>
+                        <p><strong><i class="fa-brands fa-github"></i> GitHub:</strong> <a href="https://github.com/SomaiAghaa" target="_blank" style="color: var(--primary-color); text-decoration: none;">View GitHub Profile</a></p>
                     </div>
                 </div>
             </div>
@@ -354,13 +372,6 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
-            <div class="footer-social">
-                <a href="https://github.com/SomaiAghaa" target="_blank" class="social-icon">GitHub</a>
-                <a href="https://www.linkedin.com" target="_blank" class="social-icon">LinkedIn</a>
-            </div>
-            <div class="footer-cv">
-                <a href="#" id="downloadCvBtn" class="btn btn-secondary btn-sm">Download CV (PDF)</a>
-            </div>
             <p class="footer-copy">&copy; 2026 Somia Rashad Aghaa</p>
         </div>
     </footer>
