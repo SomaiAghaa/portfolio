@@ -31,9 +31,9 @@ if (darkModeToggle) {
 
 // 3. Certificates Modal Data & Functions
 const certificatesData = {
-    depi: { img: 'depi-cert.png', caption: 'DEPI Software Testing Track Certification' },
     nti: { img: 'nti-ml.png', caption: 'NTI Machine Learning Training Program (120 Hours, Grade: 86.5%)' },
     cib: { img: 'cib-ai.png', caption: 'CIB Generative AI Summer Internship Certificate' },
+    sprints: { img: 'sprints-testing.png', caption: 'Sprints x Microsoft Software Testing Program (2025)' },
     tcsc: { img: 'tcsc-ai.png', caption: 'TCSC Arab Open University / Cisco Modern AI Course' },
     iti: { img: 'iti-qa.png', caption: 'ITI Mahara-Tech Software Testing Concepts' },
     masr: { img: 'google-ai.png', caption: 'Google for Developers - Build with AI: MASR Edition' }
