@@ -160,6 +160,7 @@ a, button, input, .btn, .project-card, .credential-card, .training-card {
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -218,12 +219,26 @@ section {
     border-radius: 2px;
 }
 
-/* About Section */
+/* About Section & Profile Image */
 .about-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 280px 1fr;
     gap: 40px;
     align-items: center;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    box-shadow: var(--shadow);
 }
 
 .about-text p {
@@ -246,26 +261,6 @@ section {
     margin-right: 8px;
     width: 16px;
     text-align: center;
-}
-
-.about-tech h3 {
-    margin-bottom: 15px;
-}
-
-.tech-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.badge {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    box-shadow: var(--shadow);
 }
 
 /* Trainings Section Style */
@@ -356,7 +351,7 @@ section {
     gap: 8px;
 }
 
-/* Projects Section */
+/* Projects Section & Repository Button */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -407,15 +402,25 @@ section {
     flex-grow: 1;
 }
 
-.project-link {
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 25px;
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    background: transparent;
+    transition: all 0.2s ease;
+    width: fit-content;
 }
 
-.project-link:hover {
-    text-decoration: underline;
+.project-btn:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
 }
 
 /* Credentials Section */
@@ -471,7 +476,6 @@ section {
     border-radius: 6px;
     font-size: 0.85rem;
     color: var(--text-color);
-    cursor: none !important;
     transition: all 0.2s;
 }
 
@@ -512,7 +516,6 @@ section {
     top: 10px;
     right: 15px;
     font-size: 1.5rem;
-    cursor: none !important;
     color: var(--text-color);
 }
 
@@ -545,13 +548,13 @@ section {
 
 .contact-info p {
     color: var(--text-muted);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     align-items: center;
     color: var(--text-muted);
 }
@@ -577,7 +580,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: none !important;
     box-shadow: var(--shadow);
     font-size: 1.1rem;
     text-decoration: none;
@@ -592,15 +594,8 @@ section {
 .footer {
     background: var(--card-bg);
     border-top: 1px solid var(--border-color);
-    padding: 40px 0;
+    padding: 30px 0;
     text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
 }
 
 .footer-copy {
@@ -608,43 +603,16 @@ section {
     font-size: 0.9rem;
 }
 
-.footer-social {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icon {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 10px 20px;
-    background: var(--bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 30px;
-    box-shadow: var(--shadow);
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.social-icon:hover {
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-    background: rgba(56, 189, 248, 0.05);
-    transform: translateY(-3px);
-}
-
 @media (max-width: 768px) {
-    body, a, button {
-        cursor: auto !important;
-    }
     .nav-menu {
         display: none;
     }
     .about-content {
         grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .about-image {
+        margin-bottom: 20px;
     }
     .hero-title {
         font-size: 2.2rem;
